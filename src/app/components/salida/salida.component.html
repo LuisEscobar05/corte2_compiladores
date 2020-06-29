@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="table-responsive-sm">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th class="bg-default e" scope="col">Pila</th>
+            <th class="bg-warning e2" scope="col">Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-success cuerpo"*ngFor="let item of data">
+            <td class="est">[{{item[0]}}]</td>
+            <td class="ent">{{item[1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div *ngIf="errorMessage == 'Cadena Aceptada'">
+      <p style="color: blue; font-size: 30px;">{{errorMessage}}</p>
+      <br>
+    </div>
+    <div *ngIf="errorMessage != 'Cadena Aceptada'">
+      <p style="color: red; font-size: 30px;">{{errorMessage}}</p>
+      <br>
+    </div>
+    <button (click)="regresar()" class="btn btn-outline-danger btn-lg">Regresar</button>
+    <br>
+    <br>
+  
+  </div>
