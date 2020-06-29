@@ -333,8 +333,7 @@ export class HomeComponent implements OnInit {
   }
 
   expresionIdentificador() {
-    this.identificador = /^[a-zA-Z]+$/;
-
+    this.identificador = /^[a-z]+$/;
     if (this.identificador.test(this.auxiCadena[this.iterator]) && this.auxiCadena[this.iterator]!=undefined) {
       return true;
     } else {
